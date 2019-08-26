@@ -4,7 +4,7 @@ variants:
   gold_fcc:
     crystal_structure: "FCC"
     lattice_constant:
-      # -- unit: nm, nm, nm, degree, degree, degree
+      # -- unit: A, A, A, degree, degree, degree
       a: 4.0782
       b: 4.0782
       c: 4.0782

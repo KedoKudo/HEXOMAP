@@ -89,17 +89,23 @@ class Config:
         except:
             raise IOError(f"Cannout write {fName} to disk, need to be yml or h5")
 
-    if __name__ == "__main__":
-        # testing loading yaml config file
-        import os
-        import hexomap
-        from pprint import pprint
-        exampleConfigFile = os.path.join(
-            os.path.dirname(hexomap.__file__),
-            "data/configs/ConfigExample.yml",
-        )
-        config = Config.load(exampleConfigFile)
-        print(config)
 
-        config.save('../tmp_test.yml')
-        config.save('../tmp_test.h5')
+if __name__ == "__main__":
+    # testing loading yaml config file
+    import os
+    import hexomap
+    from pprint import pprint
+    exampleConfigFile = os.path.join(
+        os.path.dirname(hexomap.__file__),
+        "data/configs/ConfigExample.yml",
+    )
+    config = Config.load(exampleConfigFile)
+    print(config)
+
+    config.save('../tmp_test.yml')
+    config.save('../tmp_test.h5')
+
+    config.x = 1
+
+    print(config)
+    config.save('../tmp_test2.yml')
