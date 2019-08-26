@@ -153,3 +153,4 @@ dmypy.json
 ### Local test files ###
 tmp_*
 
+.vscode/settings.json
